@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:26c050caeb2c1ddcc021ed4ff522f2372892280b78ee4baf320c1a12f007ec4c
-size 299
+import styled from "styled-components";
+
+function Footer() {
+  return <SFooterContainer>푸터</SFooterContainer>;
+}
+
+export const SFooterContainer = styled.nav`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  height: 200px;
+`;
+
+export default Footer;
