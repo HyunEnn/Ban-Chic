@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:577ace8040291b0d65f1a58cfe0c27f3c062e2a641968ddd51948e1bc480c166
-size 405
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${PROD_MYSQL_URL}/perfume?useSSL=false&useUnicode=true&allowPublicKeyRetrieval=true
+    username: ${PROD_MYSQL_USERNAME}
+    password: ${PROD_MYSQL_PASSWORD}
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: warn
+        type:
+          descriptor:
+            sql: trace

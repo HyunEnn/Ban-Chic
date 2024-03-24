@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7ec660c73413d143804a18cd38d41e8059415132fd67f8d85c95d0c40d0074e5
-size 394
+package com.ssafy.banchic.domain.dto.response;
+
+import java.util.Date;
+import lombok.Builder;
+import lombok.Getter;
+import org.springframework.http.HttpStatus;
+
+@Getter
+@Builder
+public class CommonResponse {
+
+    @Builder.Default
+    private Date timeStamp = new Date();
+    @Builder.Default
+    private HttpStatus status = HttpStatus.OK;
+    private String message;
+    private Object data;
+
+}
