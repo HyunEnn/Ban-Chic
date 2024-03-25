@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5e5e049dd8c73356abc8778f763dad9a02a0b111728c8425be40e8240885895b
-size 330
+package com.ssafy.banchic.domain.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class TokenDto {
+
+    private String grantType;
+    private String accessToken;
+    private String refreshToken;
+
+}
