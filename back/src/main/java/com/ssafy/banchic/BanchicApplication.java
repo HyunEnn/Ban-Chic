@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dacf4503912de9e9c3e565ce757e2d6d1c5c0530e11ca10cb7d84ad22d1bffdb
-size 512
+package com.ssafy.banchic;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+
+@EnableJpaAuditing
+@SpringBootApplication
+public class BanchicApplication {
+
+    static {
+        System.setProperty("com.amazonaws.sdk.disableEc2Metadata", "true");
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(BanchicApplication.class, args);
+    }
+
+}
