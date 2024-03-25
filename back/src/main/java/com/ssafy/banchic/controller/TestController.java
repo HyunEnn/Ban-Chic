@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5e2e1004107e2f915ff36c6d63a93e6dadcfce5ec49d3648e355c53a26ce0d97
-size 393
+package com.ssafy.banchic.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class TestController {
+
+    @GetMapping("/auth/test")
+    public String index() {
+        return "loginForm";
+    }
+
+    @GetMapping("/auth/test/success")
+    public String success() {
+        return "loginSuccess";
+    }
+
+}
