@@ -1,12 +1,3 @@
-package com.ssafy.banchic.oauthApi.response;
-
-
-import com.ssafy.banchic.domain.type.OAuthProvider;
-
-public interface OAuthInfoResponse {
-    String getEmail();
-    String getNickname();
-    OAuthProvider getOAuthProvider();
-//    String getAccessToken();
-//    String getRefreshToken();
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:abdc357efc8b16dcca5db49a34c7ab85e19b8f75b4692b3eb03ad3c10dbcd20c
+size 289
