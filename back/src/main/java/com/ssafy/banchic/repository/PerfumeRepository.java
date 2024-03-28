@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6b99fdf02e7181d3e3a78e32123d5ffffc543eded79eb405e468d65c3359d699
-size 289
+package com.ssafy.banchic.repository;
+
+import com.ssafy.banchic.domain.entity.Perfume;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface PerfumeRepository extends JpaRepository<Perfume, Long> {
+
+}
