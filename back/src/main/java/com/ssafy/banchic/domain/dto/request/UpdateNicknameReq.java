@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dcfa012bb3a353d3105ba065c95e79de4e96d0f45c15403cca782405d10dcbde
-size 255
+package com.ssafy.banchic.domain.dto.request;
+
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class UpdateNicknameReq {
+
+    private String nickname;
+
+}
