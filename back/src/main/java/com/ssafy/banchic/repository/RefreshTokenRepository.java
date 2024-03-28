@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3b02d9eb52691e9e3aa8ae9f5b82dd9da67ffc5a2ff7cec4d96d9aca917ad35f
-size 429
+package com.ssafy.banchic.repository;
+
+import com.ssafy.banchic.domain.entity.Member;
+import com.ssafy.banchic.domain.entity.RefreshToken;
+import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface RefreshTokenRepository extends JpaRepository<RefreshToken, Long> {
+
+    Optional<RefreshToken> findByMember(Member member);
+    Optional<RefreshToken> findByKeyValue(String value);
+
+}
