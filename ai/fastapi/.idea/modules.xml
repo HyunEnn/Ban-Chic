@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:69d1739bbe7010cc1123b56285780477d9c4b1a3c90450dc4ac7caa5f3bc9a76
-size 266
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/fastapi.iml" filepath="$PROJECT_DIR$/.idea/fastapi.iml" />
+    </modules>
+  </component>
+</project>
