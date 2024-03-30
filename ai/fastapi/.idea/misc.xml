@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:246d5d49a842d0fc594841d443936ebd5f1f2630267c74995b4570e66978dcd7
-size 298
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="sdkName" value="Python 3.12 (fastapi)" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (fastapi)" project-jdk-type="Python SDK" />
+</project>
