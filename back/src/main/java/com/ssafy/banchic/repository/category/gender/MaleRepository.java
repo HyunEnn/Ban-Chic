@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:91a4a211061e7a465535ef97d10683f3af4db568deae12cd9a2af005155a7ad0
-size 386
+package com.ssafy.banchic.repository.category.gender;
+
+import com.ssafy.banchic.domain.entity.perfume.gender.Male;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MaleRepository extends JpaRepository<Male, Long> {
+
+    Page<Male> findAll(Pageable pageable);
+}
