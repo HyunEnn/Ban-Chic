@@ -1,24 +1,3 @@
-package com.ssafy.banchic.domain.entity.perfume;
-
-import jakarta.persistence.*;
-import lombok.*;
-
-@Entity
-@Getter
-@Builder
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor
-public class Likeability {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "likeability_id")
-    private Long id;
-
-    private float love;
-    private float heart;
-    private float ok;
-    private float dislike;
-    private float hate;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe4e3e7fad42853d562e9bf65d07493f2323bfea6b40d42b1a869256d3ded24d
+size 470
