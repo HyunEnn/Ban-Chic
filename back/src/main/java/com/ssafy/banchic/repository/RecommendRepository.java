@@ -1,16 +1,3 @@
-package com.ssafy.banchic.repository;
-
-import com.ssafy.banchic.domain.entity.Member;
-import com.ssafy.banchic.domain.entity.Recommend;
-import java.util.Optional;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface RecommendRepository extends JpaRepository<Recommend, Long> {
-
-    Optional<Recommend> findByMember(Member member);
-    boolean existsByMember(Member member);
-    void deleteByMember(Member member);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4a813fc6351ebc315d659ea6bfaf7c7f21e430ed63a7d2614be7f33b4ce1533d
+size 506

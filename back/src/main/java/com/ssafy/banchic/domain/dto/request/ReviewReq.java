@@ -1,14 +1,3 @@
-package com.ssafy.banchic.domain.dto.request;
-
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-@Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class ReviewReq {
-
-    private int rate;
-    private String content;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3a6a2237ce7d92a9f1fdf63d3c35041bd8dfaa6fe21f644ac6b64b2845b194bf
+size 268

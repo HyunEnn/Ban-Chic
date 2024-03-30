@@ -1,16 +1,3 @@
-package com.ssafy.banchic.repository;
-
-import com.ssafy.banchic.domain.entity.Member;
-import com.ssafy.banchic.domain.entity.Persuit;
-import java.util.Optional;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface PersuitRepository extends JpaRepository<Persuit, Long> {
-
-    boolean existsByMember(Member member);
-    void deleteByMember(Member member);
-    Optional<Persuit> findByMember(Member member);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e6ed9500dfe326a96fa8f3974a17f84d625b0efc6d6c64cab28194aa72a33fac
+size 498
