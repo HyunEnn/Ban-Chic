@@ -1,11 +1,3 @@
-package com.ssafy.banchic.repository.category.season;
-
-import com.ssafy.banchic.domain.entity.perfume.season.Summer;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface SummerRepository extends JpaRepository<Summer, Long> {
-
-    Page<Summer> findAll(Pageable pageable);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fa2174799e9a5bebf282d0459d65f2f6f657c8370258927a468cadbde6f83fbf
+size 394
