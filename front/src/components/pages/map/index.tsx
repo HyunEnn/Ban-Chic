@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:17f5b8911dfdb07af9c6523b55a954e7cc150abc606d3cdf7f6583ff266b32fd
-size 377
+import styled from "styled-components";
+import KakaoMap from "../../atoms/kakaomap/KakaoMap";
+import BrandLists from "../../atoms/kakaomap/BrandLists";
+
+function MapPage() {
+  return (
+    <>
+      <SDiv>
+        <BrandLists />
+        <KakaoMap />
+      </SDiv>
+    </>
+  );
+}
+
+const SDiv = styled.div`
+  width: 100%;
+  height: calc(100vh - 50px);
+`;
+
+export default MapPage;
