@@ -1,20 +1,3 @@
-import { ReactNode } from "react";
-
-import styled from "styled-components";
-
-interface Props {
-  children: ReactNode;
-}
-
-function List({ children }: Props) {
-  return <SListContainer>{children}</SListContainer>;
-}
-
-const SListContainer = styled.div`
-  padding: 1em;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-`;
-
-export default List;
+version https://git-lfs.github.com/spec/v1
+oid sha256:04f733e1be8d3c25439ff7d7759c022de970d5dd1c4248ba7247931ffa8eb85e
+size 364
