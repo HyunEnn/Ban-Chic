@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1cfa18d3ba03aa61621f2aabf812a07d49a6d6507d8c9c1447678672384cc0f3
-size 469
+package com.ssafy.banchic.repository;
+
+import com.ssafy.banchic.domain.entity.Perfume;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface PerfumeRepository extends JpaRepository<Perfume, Integer> {
+
+    Page<Perfume> findByBrandNameContaining(String brandName, Pageable pageable);
+
+}
