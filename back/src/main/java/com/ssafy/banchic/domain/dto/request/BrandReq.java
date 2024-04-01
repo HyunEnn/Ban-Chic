@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d9cb0a335e57975325edc08cfe5041eeb86f64a5758cf24d377bcbdea4974ba4
-size 268
+package com.ssafy.banchic.domain.dto.request;
+
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class BrandReq {
+    private String brandName;
+}
