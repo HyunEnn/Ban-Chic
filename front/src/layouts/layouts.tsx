@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:af8c75051facc3a0ef295b8fc27a36ad26d93cefa0d3ee4d16771e1777d247c4
-size 490
+import styled from "styled-components";
+import GNB from "../components/molecules/common/gnb";
+import Footer from "../components/molecules/common/footer";
+import { Outlet } from "react-router";
+
+function Layouts() {
+  return (
+    <SLayout>
+      <GNB />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </SLayout>
+  );
+}
+
+const SLayout = styled.div`
+  width: 100%;
+
+  &:nth-child(1) > :nth-child(2) {
+    min-height: calc(100vh - (250px));
+  }
+`;
+
+export default Layouts;
