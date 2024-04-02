@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dcb0525ad85221ba1364aad14e92de52f6fb3f0896a89098ddb0e5b97a033cdb
-size 266
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/banchic.iml" filepath="$PROJECT_DIR$/.idea/banchic.iml" />
+    </modules>
+  </component>
+</project>

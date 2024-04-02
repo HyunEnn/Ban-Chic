@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b1788fa7e6e51858fa97e06bbc2349ceda1d824d862926ff3515b036e7a4f32f
-size 296
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="sdkName" value="Python 3.9 (banchic)" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (banchic)" project-jdk-type="Python SDK" />
+</project>

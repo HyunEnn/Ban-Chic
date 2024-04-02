@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:95880ec6a2e1449f90ffce14023ebb39db2fd2e4dcecaa3baa5e9a843b9ed520
-size 284
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="sdkName" value="banChicFinal" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="banchicRealFinal" project-jdk-type="Python SDK" />
+</project>
