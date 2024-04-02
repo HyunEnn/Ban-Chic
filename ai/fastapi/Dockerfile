@@ -9,4 +9,5 @@ COPY ./fashionPerfumes.csv /zozo/fashionPerfumes.csv
 COPY ./model.h5 /zozo/model.h5
 COPY ./model.py /zozo/model.py
 COPY ./db.py /zozo/db.py
+COPY ./.env /zozo/.env
 CMD ["uvicorn", "main:app", "--proxy-headers", "--host", "0.0.0.0", "--port", "9876"]
