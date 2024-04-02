@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0c3aee6d4f652de0a62da56997ab77058e6b709408e78f59f6f54c27c76465eb
-size 465
+import { ReactNode } from "react";
+
+import styled from "styled-components";
+
+interface Props {
+  children: ReactNode;
+}
+
+function List({ children }: Props) {
+  return <SListContainer>{children}</SListContainer>;
+}
+
+const SListContainer = styled.div`
+  padding: 1em;
+  display: flex;
+  gap: 10px;
+  max-height: 375px;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+`;
+
+export default List;
