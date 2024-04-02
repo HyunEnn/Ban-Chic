@@ -2,7 +2,6 @@ FROM python:3.9
 WORKDIR /zozo
 COPY ./requirements.txt /zozo/requirements.txt
 RUN pip install --upgrade pip
-RUN pip install tensorflow-intel
 RUN pip install --no-cache-dir --upgrade -r /zozo/requirements.txt
 COPY ./main.py /zozo/main.py
 COPY ./perfume_data.csv /zozo/perfume_data.csv
