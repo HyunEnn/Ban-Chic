@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:219ee5955aa87fa52caddab07a045628c05b757fda2978e7bf1191e6df87ff75
-size 395
+package com.ssafy.banchic.repository.category.season;
+
+import com.ssafy.banchic.domain.entity.perfume.season.Spring;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SpringRepository extends JpaRepository<Spring, Long> {
+
+    Page<Spring> findAll(Pageable pageable);
+
+}
