@@ -1,23 +1,3 @@
-import { MouseEventHandler } from "react";
-import styled from "styled-components";
-
-type perfumeProps = {
-  select: string;
-  click: MouseEventHandler;
-  children: any;
-};
-
-function Perfume({ children, select, click }: perfumeProps) {
-  return (
-    <SLi onClick={click} $selected={select === children}>
-      {children}
-    </SLi>
-  );
-}
-
-const SLi = styled.li<{ $selected: boolean }>`
-  cursor: pointer;
-  font-weight: ${(props) => props.$selected && "bold"};
-`;
-
-export default Perfume;
+version https://git-lfs.github.com/spec/v1
+oid sha256:ccd732d5b81fb016cb87443ddc34a09a3f7bafdc3b26216abab59e4f3f218f2c
+size 705
