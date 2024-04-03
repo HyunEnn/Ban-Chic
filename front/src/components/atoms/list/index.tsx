@@ -1,27 +1,3 @@
-import { ReactNode } from "react";
-
-import styled from "styled-components";
-
-interface Props {
-  children: ReactNode;
-}
-
-function List({ children }: Props) {
-  return <SListContainer>{children}</SListContainer>;
-}
-
-const SListContainer = styled.div`
-  padding: 1em;
-  display: flex;
-  gap: 10px;
-  max-height: 375px;
-  overflow-x: scroll;
-  flex-wrap: wrap;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-`;
-
-export default List;
+version https://git-lfs.github.com/spec/v1
+oid sha256:b95a5b80432ffff2942d1d6b68f378d25428028f79be530b6af238417c94dec1
+size 490
