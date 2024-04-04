@@ -1,18 +1,3 @@
-import { ReactNode } from "react";
-import styled from "styled-components";
-
-interface Props {
-  children: ReactNode;
-}
-
-function MyReviewList({ children }: Props) {
-  return <SList>{children}</SList>;
-}
-
-const SList = styled.article`
-  width: 100%;
-  height: 100%;
-  background-color: blue;
-`;
-
-export default MyReviewList;
+version https://git-lfs.github.com/spec/v1
+oid sha256:eee065fc1702025c9f3ba60b7a848f2d0f2cfc2fa8cee52b62c655e06f83c86a
+size 324

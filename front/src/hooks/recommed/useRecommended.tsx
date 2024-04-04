@@ -1,10 +1,3 @@
-import { useQuery } from "@tanstack/react-query";
-import { getRecommendedPerfumeList } from "../../api/Api";
-
-function useRecommended() {
-  return useQuery({
-    queryKey: ["myrecommed"],
-    queryFn: () => getRecommendedPerfumeList(),
-  });
-}
-export default useRecommended;
+version https://git-lfs.github.com/spec/v1
+oid sha256:3c2cbd3ba643558e2e9af4a478d6355dd04ef2aabbff26fe98a088e6466881ce
+size 275

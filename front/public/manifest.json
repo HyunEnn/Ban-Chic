@@ -1,21 +1,3 @@
-{
-  "short_name": "Ban:Chic",
-  "name": "Ban:Chic",
-  "icons": [
-    {
-      "src": "BC192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "BC512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": "/",
-  "display": "standalone",
-  "orientation": "portrait",
-  "theme_color": "#191919",
-  "background_color": "#191919"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc327e7762631281faa949498ca310d9b171d35ce2b5cd609ebff1e8d3d9eefc
+size 389
