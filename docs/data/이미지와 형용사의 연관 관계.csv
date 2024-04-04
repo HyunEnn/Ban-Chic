@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:36463d6feef74d8c4f06ba96446ba419b425650b2259913ad612a5502688db97
-size 4115
+﻿타입,한글명,영문명,형용사 개수
+Clear,"맑고, 깔끔하며, 신선하고 젊은, 명료한, 순수한, 깨끗한, 순수하고 간단한, 결정적인, 청량한, 깨끗하고 신선한, 상쾌한, 간단한","light, neat, fresh and young, clear, pure, clean, pure and simple, crystalline, clean and fresh, refreshing, simple",11
+Romantic,"매력적인, 부드러운, 로맨틱한, 순수한, 유연한, 몽환적인, 만질 만한","charming, soft, romantic, innocent, supple, dreamy, agreeable to the touch",7
+Pretty,"달콤한, 예쁜, 귀여운, 어린아이 같은","sweet, pretty, cute, childlike",4
+Cool-casual,"젊고 안정된, 경쾌한, 똑똑한, 서양식의, 빠른, 스포티한, 민첩한","youthful, steady, young, smart, western, speedy, sporty, agile",8
+Casual,"쾌활한, 행복한, 축제 분위기의, 즐거운, 밝은, 화려한, 유쾌한, 재미있는, 캐주얼한, 화려한, 눈부신, 열대적인","cheerful, happy, festive, enjoyable, bright, dazzling, merry, amusing, casual, flamboyant, showy, vivid, tropical",13
+Natural,"온화한, 친밀한, 관대한, 자유로운, 즐거운, 편안한, 달콤한-시큼한, 명랑한, 건강한, 친근한, 부드러운, 가정적인, 개방적인, 맛있는, 향수를 자아내는, 건강한, 평온한, 평범한, 고요한, 신선한","gentle, intimate, generous, free, pleasant, restful, sweet-sour, lighthearted, healthy, friendly, smooth, domestic, open, delicious, nostalgic, citrus, wholesome, peaceful, plain, tranquil, fresh",7
+Elegant,"여성스러운, 교양 있는, 연약한, 섬세한, 자연스러운, 감정적인, 단순하고 매력적인, 매끈한, 순수하고 우아한, 우아한, 온화하고 우아한, 우아함, 우아하고 세련된, 우아한, 차분한, 유행을 따르는, 차분한, 고상한, 정제된, 섬세한, 흥미로운, 신비로운, 훌륭한","feminine, cultured, tender, delicate, natural, emotional, simple and appealing, sleek, pure and elegant, elegant, gentle and elegant, graceful, calm, fashionable, sedate, noble, refined, subtle, interesting, mysterious, brilliant",21
+Dynamic,"활기찬, 뜨거운, 도발적인, 활발한, 다이내믹한, 강력한, 대담한, 활동적인, 불꽃 같은, 강렬한","lively, hot, provocative, vigorous, dynamic, forceful, bold, dynamic and active, active, fiery, striking, intense",12
+Wild,"야생의, 민족적인, 원시적인, 거친","wild, ethnic, robust, untamed",4
+Gorgeous,"풍부한, 매혹적인, 풍부한, 윤이 나는, 향기로운, 매혹적인, 성숙한, 화려한, 호화로운, 장식적인, 술술 풀어지는","abundant (+rich?), fascinating, substantial, glossy, aromatic alluring, mature, extravagant, gorgeous, luxurious, decorative, mellow",11
+Chic,"시크한, 조용한, 겸손한, 고상하고 우아한, 일본식의, 단순한, 소박한, 세련된","chic, quiet, modest, noble and elegant, japanese, simple, sober, stylish",8
+Modern,"도시적인, 진보적인, 차분한, 특별한, 지적인, 현대적인, 세련된, 정밀한, 날카로운, 정확한, 이성적인, 숭고한, 진지한, 적절한, 금속적인","urban, progessive, composed, distinguished, intellectual, modern, cultivated precise, sharp, exact, rational, masculine, sublime, earnest, proper, metalllic",15
+Classic,"지방적인, 전통적인, 고요한, 섬세한, 복잡한, 구식의, 클래식한, 전통적인, 보수적인, 정교한, 무겁고 깊은, 튼튼한","provincial, rustic, mellow, tasteful, complex, old-fashioned, classic, traditional, conservative, elaborate, heavy and deep, sturdy",12
+Dandy,"근면한, 섬세하고 신비로운, 조용하고 세련된, 쓴, 귀족적인, 귀중한, 고요한, 세련된, 실용적인, 건전한, 무거고 깊은, 튼튼하고 강건한, 진지한, 공식적인, 엄숙한, 웅장한, 단정한, 정중한, 권위 있는","diligent, subtle and mysterious, quiet and sophisticated, bitter, aristocratic, precious, placid, dapper, practical, sound, heavy and deep, strong and robust, serious, formal, solemn, majestic, dignified, sublime, earnest, proper, authoritative",21

@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e2954aef1b18b4db4ec4e208f85ba449102c2d1c75d0e3b7be6329dd7e9589cc
-size 841
+package com.ssafy.banchic.domain.dto.response.perfume;
+
+import com.ssafy.banchic.domain.entity.perfume.Sillage;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+public class SillageRes {
+
+    private int veryWeak;
+    private int weak;
+    private int moderate;
+    private int longLasting;
+    private int eternal;
+
+    public static SillageRes from(Sillage sillage) {
+        return SillageRes.builder()
+            .veryWeak(sillage.getVeryWeak())
+            .weak(sillage.getWeak())
+            .moderate(sillage.getModerate())
+            .longLasting(sillage.getLongLasting())
+            .eternal(sillage.getLongLasting())
+            .build();
+    }
+
+}

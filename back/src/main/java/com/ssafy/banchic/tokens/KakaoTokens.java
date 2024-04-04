@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7158f30d95ad0ca1a58783bfc692d2a6450be5abe40b2d75b42aa4c09fdfde88
-size 606
+package com.ssafy.banchic.tokens;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor
+public class KakaoTokens {
+
+    @JsonProperty("access_token")
+    private String accessToken;
+
+    @JsonProperty("token_type")
+    private String tokenType;
+
+    @JsonProperty("refresh_token")
+    private String refreshToken;
+
+    @JsonProperty("expires_in")
+    private String expiresIn;
+
+    @JsonProperty("refresh_token_expires_in")
+    private String refreshTokenExpiresIn;
+
+    @JsonProperty("scope")
+    private String scope;
+}

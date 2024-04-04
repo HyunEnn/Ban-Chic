@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:51e766e47a233f9b9e5198ecf0549949aab0868caa57fcc076f2945f686d236c
-size 627
+package com.ssafy.banchic.domain.entity.perfume;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.*;
+
+@Entity
+@Getter
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+public class Price {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "price_id")
+    private Long id;
+
+    private int wayOverpriced;
+    private int overpriced;
+    private int ok;
+    private int goodValue;
+    private int greatValue;
+
+}

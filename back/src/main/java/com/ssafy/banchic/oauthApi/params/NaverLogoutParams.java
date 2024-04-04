@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b5f1046bbd58dc7c5f2d6d1184d91ba67f2380bd2e7b341b44a39905f2339d14
-size 790
+package com.ssafy.banchic.oauthApi.params;
+
+import com.ssafy.banchic.domain.type.OAuthProvider;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+
+
+@Getter
+@NoArgsConstructor
+public class NaverLogoutParams implements OAuthLogoutParams {
+    private String accessToken;
+    private String serviceProvider;
+
+    @Override
+    public OAuthProvider oAuthProvider() {
+        return OAuthProvider.NAVER;
+    }
+
+    @Override
+    public MultiValueMap<String, String> makebody() {
+        LinkedMultiValueMap<String, String> body = new LinkedMultiValueMap<>();
+        body.add("access_token", accessToken);
+        body.add("service_provider", serviceProvider);
+        return body;
+    }
+}

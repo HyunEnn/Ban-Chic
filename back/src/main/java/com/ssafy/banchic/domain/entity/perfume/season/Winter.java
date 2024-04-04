@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:09b167e3169a822b8ed0dd202a521f7cd5427a79dc7e282799306ecfaec7d5f3
-size 833
+package com.ssafy.banchic.domain.entity.perfume.season;
+
+
+import com.ssafy.banchic.domain.entity.BaseEntity;
+import com.ssafy.banchic.domain.entity.Perfume;
+import com.ssafy.banchic.domain.entity.perfume.Season;
+import jakarta.persistence.*;
+import lombok.*;
+
+@Entity
+@Getter
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+public class Winter extends BaseEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "winter_id")
+    private int id;
+
+    @OneToOne
+    @JoinColumn(name = "perfume_id")
+    private Perfume perfume;
+
+    public Winter(Perfume perfume) {
+        this.perfume = perfume;
+    }
+    @Builder
+    public static Winter from(Perfume perfume) {
+        return Winter.builder()
+                .perfume(perfume)
+                .build();
+    }
+}

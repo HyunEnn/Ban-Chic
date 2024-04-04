@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:18e9444d29174030d82a0a58a5337844c505e5149f2c842548a7a300dc8219cc
-size 844
+package com.ssafy.banchic.domain.dto.response;
+
+import com.ssafy.banchic.domain.entity.Review;
+import java.time.LocalDateTime;
+import lombok.Builder;
+import lombok.Getter;
+
+@Builder
+@Getter
+public class ReviewRes {
+
+    private Long id;
+    private int rate;
+    private String content;
+    private String imgUrl;
+    private MemberInfoRes member;
+    private LocalDateTime createdAt;
+    private LocalDateTime modifiedAt;
+
+    public static ReviewRes from(Review review) {
+        return ReviewRes.builder()
+            .id(review.getId())
+            .rate(review.getRate())
+            .content(review.getContent())
+            .imgUrl(review.getImgUrl())
+            .member(MemberInfoRes.from(review.getMember()))
+            .createdAt(review.getCreatedAt())
+            .modifiedAt(review.getModifiedAt())
+            .build();
+    }
+
+}

@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a97e62da7fc0a7ba7b295eafe19a218ba4c09775e290ee4a241e3baa95f64f40
-size 603
+package com.ssafy.banchic.domain.entity.perfume;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.*;
+
+@Entity
+@Getter
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+public class Longevity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "longeivty_id")
+    private Long id;
+
+    private int intimate;
+    private int moderate;
+    private int strong;
+    private int enormous;
+
+}
