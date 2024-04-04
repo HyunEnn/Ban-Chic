@@ -1,0 +1,21 @@
+{
+  "short_name": "Ban:Chic",
+  "name": "Ban:Chic",
+  "icons": [
+    {
+      "src": "BC192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "BC512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#191919",
+  "background_color": "#191919"
+}
