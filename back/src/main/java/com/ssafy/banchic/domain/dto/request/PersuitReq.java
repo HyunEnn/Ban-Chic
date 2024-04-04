@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3c8e4e0cf5cb2c70bc505828e2ea0b1ef8de6cef51c48ef9438fc2f7fe34e32e
-size 673
+package com.ssafy.banchic.domain.dto.request;
+
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class PersuitReq {
+
+        private Boolean clear;
+        private Boolean romantic;
+        private Boolean pretty;
+        private Boolean coolcasual;
+        private Boolean casual;
+        private Boolean natural;
+        private Boolean elegant;
+        private Boolean dynamic;
+        private Boolean wild;
+        private Boolean gorgeous;
+        private Boolean chic;
+        private Boolean modern;
+        private Boolean classic;
+        private Boolean dandy;
+
+}

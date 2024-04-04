@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d7c4afa1f7693153d7221a4c4a3cb4c03b9127173377db2d431741b77c311f89
-size 905
+﻿향 타입,형용사,개수,색상
+시트러스,"Pretty, natural, elegant, cool-casual",4,"orange, yellow, green"
+네톨리,"natural, elegant, cool-casual",3,"orange, green"
+라벤더 캠퍼,"chic, modern",2,"blue, violet"
+어그래틱,"chic, modern",2,"blue, violet"
+스파이스,"natural, elegant, formal, cool-casual, modern",5,"orange, green, indigo"
+아니스,"natural, elegant, pretty, cool-casual",4,"orange, yellow, green"
+우디,"pretty, casual, gorgeous, natural, elegant, chic, cool-casual",7,"red, orange, yellow, green, violet"
+플로럴,"casual, gorgeous, cool",3,"red, green"
+레진,"casual, gorgeous",2,red
+발사믹 앰버,"natural, gorgeous, pretty",3,"orange, yellow"
+애니멀,"casual, gorgeous",2,red
+민트,"casual, gorgeous",2,green
+시트로렐라 시트랄,"pretty, natural",2,yellow
+파인,"natural, elegant",2,orange
+기타,"cool-casual, morden, chic",3,"green, blue, violet"

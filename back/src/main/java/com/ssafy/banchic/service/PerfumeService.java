@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e4160f9c47b398dbec62beab29fc625fec6ff754f4fdd706a3127b7123b95c5c
-size 853
+package com.ssafy.banchic.service;
+
+import com.ssafy.banchic.domain.dto.response.perfume.PerfumeRes;
+import com.ssafy.banchic.domain.entity.Perfume;
+import com.ssafy.banchic.exception.CustomException;
+import com.ssafy.banchic.exception.ErrorCode;
+import com.ssafy.banchic.repository.PerfumeRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Service
+@RequiredArgsConstructor
+public class PerfumeService {
+
+    private final PerfumeRepository perfumeRepository;
+
+    @Transactional(readOnly = true)
+    public PerfumeRes getPerfume(int perfumeId) {
+        Perfume perfume = perfumeRepository.findById(perfumeId)
+            .orElseThrow(() -> new CustomException(ErrorCode.NOT_FOUND_ID));
+
+        return PerfumeRes.from(perfume);
+    }
+
+}
