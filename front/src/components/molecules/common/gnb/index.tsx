@@ -1,16 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
-import Page_Url from "../../../../router/Url";
-import SideBar from "./sideBar";
-import { SHeaderContainer, SImgContainer, SLink } from "./GNB.styles";
-
-function GNB() {
-  return (
-    <SHeaderContainer>
-      <SLink to={Page_Url.Main}>Ban:Chic</SLink>
-      <SImgContainer src="/logoImg/logo_triangle_banchic.png" alt="Logo" />
-      <SideBar />
-    </SHeaderContainer>
-  );
-}
-
-export default GNB;
+version https://git-lfs.github.com/spec/v1
+oid sha256:4a2ccd47992823e6c9986b9b7fcd1da0865e2add6df1d1a53242827b82aa403f
+size 456

@@ -1,7 +1,3 @@
-# Ban:Chic
-
-# SSAFY 특화 프로젝트 B311 - 빅데이터 추천
-
-프로젝트 기간 : 24.02.26 - 24.04.05, 6 weeks
-
-주제 : 추구미 기반 향수 추천 서비스
+version https://git-lfs.github.com/spec/v1
+oid sha256:9bd11fed911ca45ccb9e58b70a4c0138aa2c224c090b92dbb90c8302867cdcc7
+size 3546

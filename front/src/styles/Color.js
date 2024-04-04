@@ -1,15 +1,3 @@
-const color = {
-  // 백그라운드 컬러
-  bgColor: "#191919",
-  fontColor: "#EFEFEF",
-  sectionColor: "transparent",
-  primaryColor: "#FEC638",
-  secondaryColor: "#EFEFEF",
-  actionColor: "#70A5FE",
-  successColor: "#00C42D",
-  warningColor: "#FFC107",
-  errorColor: "#FF142B",
-  clearBlockColor: "rgba(255, 255, 255, 0.1)",
-};
-
-export default color;
+version https://git-lfs.github.com/spec/v1
+oid sha256:fff2ba075ecbf03bdf95fc959fdcefe962cf273fa157ce015b4a43877ccdfa43
+size 355
