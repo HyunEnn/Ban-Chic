@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fd06acb58c77e5e133a6bc70001b246b709f067fbb2d02367b2046ea4ead1c46
-size 631
+package com.ssafy.banchic.domain.entity;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity
+public class RefreshToken extends BaseEntity {
+
+    @Id
+    @Column(name = "refresh_token_id")
+    private String id;
+
+    @JoinColumn(name = "member_id", nullable = false)
+    @OneToOne(fetch = FetchType.LAZY)
+    private Member member;
+
+    @Column(nullable = false)
+    private String keyValue;
+
+    public void updateValue(String token) {
+        this.keyValue = token;
+    }
+
+}

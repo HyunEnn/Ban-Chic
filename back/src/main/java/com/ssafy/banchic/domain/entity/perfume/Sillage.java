@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c526e612fa4ba301bd3d593035449a9ebf684839acf041057431a61c5607e62a
-size 625
+package com.ssafy.banchic.domain.entity.perfume;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.*;
+
+@Entity
+@Getter
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+public class Sillage {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "sillage_id")
+    private Long id;
+
+    private int veryWeak;
+    private int weak;
+    private int moderate;
+    private int longLasting;
+    private int eternal;
+
+}

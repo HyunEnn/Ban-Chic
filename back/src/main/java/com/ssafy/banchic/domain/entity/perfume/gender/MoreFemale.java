@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5211ba96ab20b83aebefb53d4ea4722bdc0ab39332e8f435f10e652a4b0a150b
-size 860
+package com.ssafy.banchic.domain.entity.perfume.gender;
+
+import com.ssafy.banchic.domain.entity.BaseEntity;
+import com.ssafy.banchic.domain.entity.Perfume;
+import com.ssafy.banchic.domain.entity.perfume.Gender;
+import jakarta.persistence.*;
+import lombok.*;
+
+@Entity
+@Getter
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+public class MoreFemale extends BaseEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "moreFemale_id")
+    private int id;
+
+    @OneToOne
+    @JoinColumn(name = "perfume_id")
+    private Perfume perfume;
+
+    public MoreFemale(Perfume perfume) {
+        this.perfume = perfume;
+    }
+    @Builder
+    public static MoreFemale createFemale(Perfume perfume) {
+        return MoreFemale.builder()
+                .perfume(perfume)
+                .build();
+    }
+}

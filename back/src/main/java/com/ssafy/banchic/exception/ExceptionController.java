@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4d56c4978102b5239df2f3def8f8c2d8ddaed2f8f0f88f13b509a31f09d8f455
-size 941
+package com.ssafy.banchic.exception;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+@ControllerAdvice
+@Slf4j
+public class ExceptionController {
+
+    @ExceptionHandler({
+        CustomException.class
+    })
+    public ResponseEntity<ExceptionResponse> customRequestException
+        (final CustomException e) {
+        log.warn("api Exception : {}", e.getErrorCode());
+        return ResponseEntity.status(e.getErrorCode().getHttpStatus())
+            .body(new ExceptionResponse(e.getMessage(), e.getErrorCode()));
+    }
+
+    @Getter
+    @ToString
+    @AllArgsConstructor
+    public static class ExceptionResponse {
+        private String message;
+        private ErrorCode errorCode;
+    }
+
+}

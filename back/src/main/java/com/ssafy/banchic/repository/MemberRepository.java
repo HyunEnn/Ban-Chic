@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f45094aad5362ed264f7683816b2d3d126ab17f6b2e04100984e6eef925f1c72
-size 792
+package com.ssafy.banchic.repository;
+
+import com.ssafy.banchic.domain.entity.Member;
+import com.ssafy.banchic.domain.type.OAuthProvider;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface MemberRepository extends JpaRepository<Member, Long> {
+
+    Optional<Member> findByEmail(String email);
+
+    boolean findByNickname(String nickname);
+
+    @Query("select m from Member m where m.email = :email and m.oAuthProvider = :oauthProvider")
+    Member findByEmailAndOAuthProvider(@Param("email") String email, @Param("oauthProvider") OAuthProvider oAuthProvider);
+
+}

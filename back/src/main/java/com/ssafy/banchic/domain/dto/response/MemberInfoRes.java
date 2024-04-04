@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d53a8f6df624d8046263ea59494a2e4e15309979d1ea6c5b29c5142f79ce7622
-size 514
+package com.ssafy.banchic.domain.dto.response;
+
+import com.ssafy.banchic.domain.entity.Member;
+import lombok.Builder;
+import lombok.Getter;
+
+@Builder
+@Getter
+public class MemberInfoRes {
+
+    private String email;
+    private String image;
+    private String nickname;
+
+    public static MemberInfoRes from(Member member) {
+        return MemberInfoRes.builder()
+            .email(member.getEmail())
+            .image(member.getImage())
+            .nickname(member.getNickname())
+            .build();
+    }
+
+}

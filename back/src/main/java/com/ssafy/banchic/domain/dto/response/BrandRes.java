@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7dba3bc8ba250001d00e6832c2bc5bb0080ba77b8642a863b61c2e52315d9818
-size 768
+package com.ssafy.banchic.domain.dto.response;
+
+import com.ssafy.banchic.domain.entity.Perfume;
+import lombok.Builder;
+import lombok.Getter;
+
+@Getter
+@Builder
+public class BrandRes {
+    private int perfumeId;
+    private String originName;
+    private String brand;
+    private String accord;
+    private String korName;
+    private String perfumeImg;
+
+    public static BrandRes from(Perfume perfume) {
+        return BrandRes.builder()
+                .perfumeId(perfume.getId())
+                .originName(perfume.getPerfumeName())
+                .brand(perfume.getBrandName())
+                .accord(perfume.getAccords())
+                .korName(perfume.getKoreanName())
+                .perfumeImg(perfume.getPerfumeImg())
+                .build();
+    }
+
+}

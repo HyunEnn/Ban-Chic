@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6caa8ded9e2d00025ce17c39e3b175b04a2ea6c07598c9baa6c7dce8363e3d40
-size 549
+package com.ssafy.banchic.tokens;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class AuthTokens {
+    private String accessToken;
+    private String refreshToken;
+    private String grantType;
+    private Long expiresIn;
+
+    public static AuthTokens of(String accessToken, String refreshToken, String grantType, Long expiresIn) {
+        return new AuthTokens(accessToken, refreshToken, grantType, expiresIn);
+    }
+}

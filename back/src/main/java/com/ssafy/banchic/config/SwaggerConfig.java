@@ -1,3 +1,53 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3aed13cf548efb4180b06c4980dd8578c8bf52f3310d7042716751223ee8ecdf
-size 1734
+package com.ssafy.banchic.config;
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.models.Components;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.security.SecurityRequirement;
+import io.swagger.v3.oas.models.security.SecurityScheme;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpHeaders;
+
+@OpenAPIDefinition(
+    info = @Info(
+        title = "[Ban:Chic] API 명세서",
+        description = "REST API",
+        version = "1.0.0"
+    )
+)
+@Configuration
+public class SwaggerConfig {
+
+    @Bean
+    public OpenAPI openAPI() {
+        String key = "Authorization";
+        String refreshKey = "RefreshToken";
+
+        SecurityRequirement securityRequirement = new SecurityRequirement()
+            .addList(key)
+            .addList(refreshKey);
+
+        SecurityScheme accessTokenSecurityScheme = new SecurityScheme()
+            .type(SecurityScheme.Type.HTTP)
+            .scheme("bearer")
+            .bearerFormat("JWT")
+            .in(SecurityScheme.In.HEADER)
+            .name(HttpHeaders.AUTHORIZATION);
+
+        SecurityScheme refreshTokenSecurityScheme = new SecurityScheme()
+            .type(SecurityScheme.Type.APIKEY)
+            .in(SecurityScheme.In.HEADER)
+            .name("RefreshToken");
+
+        Components components = new Components()
+            .addSecuritySchemes(key, accessTokenSecurityScheme)
+            .addSecuritySchemes(refreshKey, refreshTokenSecurityScheme);
+
+        return new OpenAPI()
+            .addSecurityItem(securityRequirement)
+            .components(components);
+    }
+
+}
