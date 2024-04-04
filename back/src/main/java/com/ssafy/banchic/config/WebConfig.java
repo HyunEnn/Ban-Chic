@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e7c152fe8aab478c4f30d29ed81ec4cf14ad3134cbf4dabbb595230d585a7b65
-size 727
+package com.ssafy.banchic.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class WebConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+            .allowedOrigins("http://localhost:5173",
+                            "http://j10b109.p.ssafy.io:5173",
+                            "https://banchic.store")
+            .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+            .exposedHeaders("Authorization", "RefreshToken");
+    }
+
+}

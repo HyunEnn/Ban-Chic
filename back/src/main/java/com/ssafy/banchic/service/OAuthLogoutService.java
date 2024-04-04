@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9f799e473e9c1869d37fa9de1613acbceb1b22d283c3603f43365408c5f395eb
-size 593
+package com.ssafy.banchic.service;
+
+import com.ssafy.banchic.oauthApi.client.RevokeTokenResponseDto;
+import com.ssafy.banchic.oauthApi.params.OAuthLogoutParams;
+import com.ssafy.banchic.oauthApi.response.RequestOAuthInfoService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
+public class OAuthLogoutService {
+
+    private final RequestOAuthInfoService requestOAuthInfoService;
+
+    public RevokeTokenResponseDto logout(OAuthLogoutParams params) {
+        return requestOAuthInfoService.logoutService(params);
+    }
+
+}

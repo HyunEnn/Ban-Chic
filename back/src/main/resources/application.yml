@@ -1,3 +1,77 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bf9bbc16631f984bb15238ae049792c3cdeaaecb54c584b1c5ca3d0a096a9eca
-size 1762
+server:
+  servlet:
+    encoding:
+      force: true
+      charset: UTF-8
+    context-path: /api
+  port: 8081
+
+jwt:
+  secret: ${JWT_KEYVALUE}
+
+oauth:
+  kakao:
+    client-id: ${KAKAO_CLIENTID}
+    url:
+      auth: https://kauth.kakao.com
+      api: https://kapi.kakao.com
+      redirect: http://localhost:8081/users/logout/kakao
+      logout: https://kapi.kakao.com/v1/user/logout
+  naver:
+    secret: ${NAVER_SECRET}
+    client-id: ${NAVER_CLIENTID}
+    url:
+      auth: https://nid.naver.com
+      api: https://openapi.naver.com
+
+spring:
+  profiles:
+    active: local
+  datasource:
+    source:
+      username: ${LOCAL_MYSQL_USERNAME}
+      password: ${LOCAL_MYSQL_PASSWORD}
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/perfume?useSSL=false&useUnicode=true&allowPublicKeyRetrieval=true
+    replica:
+      username: ${LOCAL_MYSQL_USERNAME}
+      password: ${LOCAL_MYSQL_PASSWORD}
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/perfume?useSSL=false&useUnicode=true&allowPublicKeyRetrieval=true
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+      format_sql: true
+      use_sql_comments: true
+      highlight_sql: true
+    database: mysql
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+cloud:
+  aws:
+    s3:
+      bucket: ${S3_BUCKET_NAME}
+    credentials:
+      access-key: ${ACCESS_KEY}
+      secret-key: ${SECRET_KEY}
+    region:
+      static: ap-northeast-2
+      auto: false
+    stack:
+      auto: false
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type:
+          descriptor:
+            sql: trace

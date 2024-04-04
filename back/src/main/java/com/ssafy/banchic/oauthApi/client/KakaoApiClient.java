@@ -1,3 +1,84 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cd527b4586f90749880aa0792d4538f43463f9db3a0c96e8d22f35cbe3d2287c
-size 2750
+package com.ssafy.banchic.oauthApi.client;
+
+import com.ssafy.banchic.domain.type.OAuthProvider;
+import com.ssafy.banchic.oauthApi.params.OAuthLogoutParams;
+import com.ssafy.banchic.oauthApi.response.KakaoInfoResponse;
+import com.ssafy.banchic.oauthApi.response.OAuthInfoResponse;
+import com.ssafy.banchic.tokens.KakaoTokens;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Component;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.RestTemplate;
+
+
+@Component
+@RequiredArgsConstructor
+public class KakaoApiClient implements OAuthApiClient {
+
+    private static final String GRANT_TYPE = "authorization_code";
+
+    @Value("${oauth.kakao.url.auth}")
+    private String authUrl;
+
+    @Value("${oauth.kakao.url.api}")
+    private String apiUrl;
+
+    @Value("${oauth.kakao.client-id}")
+    private String clientId;
+
+    private final RestTemplate restTemplate;
+
+    @Override
+    public OAuthProvider oAuthProvider() {
+        return OAuthProvider.KAKAO;
+    }
+
+    @Override
+    public String requestAccessToken(String code) {
+        String url = authUrl + "/oauth/token";
+
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+
+        MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
+        body.add("code", code);
+        body.add("grant_type", GRANT_TYPE);
+        body.add("client_id", clientId);
+
+        HttpEntity<?> request = new HttpEntity<>(body, httpHeaders);
+
+        KakaoTokens response = restTemplate.postForObject(url, request, KakaoTokens.class);
+
+        assert response != null;
+        return response.getAccessToken();
+    }
+
+    @Override
+    public OAuthInfoResponse requestOauthInfo(String accessToken) {
+        String url = apiUrl + "/v2/user/me";
+
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+        httpHeaders.set("Authorization", "Bearer " + accessToken);
+
+        MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
+        body.add("property_keys", "[\"kakao_account.email\", \"kakao_account.profile\"]");
+
+        HttpEntity<?> request = new HttpEntity<>(body, httpHeaders);
+
+        return restTemplate.postForObject(url, request, KakaoInfoResponse.class);
+    }
+
+    // 사용 안하는 코드
+    @Override
+    public RevokeTokenResponseDto revokeAccessToken(OAuthLogoutParams params) {
+        return null;
+    }
+
+
+}
