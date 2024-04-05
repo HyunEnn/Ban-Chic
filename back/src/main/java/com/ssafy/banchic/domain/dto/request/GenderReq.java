@@ -1,11 +1,3 @@
-package com.ssafy.banchic.domain.dto.request;
-
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-@Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class GenderReq {
-    private String genderName;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b91a92e499cf767fc13a4851ef77fadb865fa70939901d2dc6eda2feddc82a23
+size 247

@@ -1,25 +1,3 @@
-package com.ssafy.banchic.domain.entity.perfume;
-
-import com.ssafy.banchic.domain.entity.Perfume;
-import jakarta.persistence.*;
-import lombok.*;
-
-@Entity
-@Getter
-@Builder
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor
-public class Gender {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "gender_id")
-    private Long id;
-
-    private int female;
-    private int moreFemale;
-    private int unisex;
-    private int moreMale;
-    private int male;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ba57b9d50fbdfe6310fa74ca7906bfb5da6732e487b9b7afa40e4b6e516c7b82
+size 510
